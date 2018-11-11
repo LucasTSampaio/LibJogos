@@ -1,0 +1,70 @@
+.cabecalho {
+	text-align: center;
+	margin: 5px;
+	padding: 20px;
+	background-color: lightgray;
+	font: sans-serif;
+	color: navy;
+}
+
+body {
+	background-color: black;
+	color: #000000;
+}
+
+* {
+	margin: 1px;
+	padding: 1px;
+}
+
+.menu {
+	text-align: right;
+	background-color: navy;
+	color: gray;
+	padding: 5px;
+	margin: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+a:hover {
+	color: white;
+	font-weight: bold;
+}
+
+.conteudo {
+	position: relative;
+	padding-bottom: 30px;
+	border: 1px #000000;
+	margin: 20px;
+	padding: 20px;
+	background-color: gray;
+
+}
+
+p {
+	text-align: justify;
+	text-indent: 4em
+}
+
+.titulo-pagina {
+	margin-top: 2px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2em;
+}
+
+.rodape {
+	position: fixed;
+	padding: 20px;
+	width: 100%;
+	color: white;
+	background-color: navy;
+	bottom: 0;
+	text-align: center;
+}

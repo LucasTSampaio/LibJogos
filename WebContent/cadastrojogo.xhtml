@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<title>Novo jogo - LibJogos</title>
+</h:head>
+<body>
+	<!-- cabeçalho -->
+	<div class="cabecalho">
+		<img src="img/logo.png" alt="Logo" />
+		<h3 class="titulo-pagina">Todo dia é dia de jogar</h3>
+	</div>
+	<hr />
+	<!-- navagacao -->
+	<div class="menu">
+		<a href="logado.xhtml">Voltar</a>
+	</div>
+	<hr />
+	<!-- conteudo -->
+	<div class="conteudo">
+		<h:form id="formJogo">
+			<p:fieldset legend="Novo Jogo" style="margin-bottom:10px">
+				<p:panelGrid columns="1">
+					<img src="img/jogo.png" alt="Jogo" />
+				</p:panelGrid>
+				<p:panelGrid columns="2">
+					<h:outputLabel value="Título:" />
+					<p:inputText id="titulo1" required="true"
+						value="#{jogoBN.jogo.titulo}" />
+					<p:outputLabel value="Gênero:" />
+					<p:selectOneMenu id="genero" value="#{jogoBN.jogo.genero}"
+						style="width:200px">
+						<f:selectItem itemLabel="Selecione um gênero" itemValue="" />
+						<f:selectItem itemLabel="Plataforma" itemValue="Plataforma" />
+						<f:selectItem itemLabel="Corrida" itemValue="Corrida" />
+						<f:selectItem itemLabel="Luta" itemValue="Luta" />
+						<f:selectItem itemLabel="Esporte" itemValue="Esporte" />
+						<f:selectItem itemLabel="Simulação" itemValue="Simulação" />
+						<f:selectItem itemLabel="Musical" itemValue="Musical" />
+						<f:selectItem itemLabel="Estratégia" itemValue="Estratégia" />
+						<f:selectItem itemLabel="Tiro" itemValue="Tiro" />
+						<f:selectItem itemLabel="Aventura" itemValue="Aventura" />
+						<f:selectItem itemLabel="Puzzle" itemValue="Puzzle" />
+						<f:selectItem itemLabel="Ação" itemValue="Ação" />
+					</p:selectOneMenu>
+					<p:outputLabel value="Ano:" />
+					<p:inputMask id="anoLancamento"
+						value="#{jogoBN.jogo.anoLancamento}" mask="9999" />
+					<h:outputText value="Estado do jogo:" />
+					<p:selectOneButton value="#{jogoBN.jogo.estadoJogo}">
+						<f:selectItem itemLabel="Usado" itemValue="Usado" />
+						<f:selectItem itemLabel="Semi-novo" itemValue="Semi-novo" />
+						<f:selectItem itemLabel="Zerado" itemValue="Zerado" />
+					</p:selectOneButton>
+					<h:outputLabel value="Plataforma:" />
+					<p:inputText id="titulo" required="true"
+						value="#{jogoBN.jogo.plataforma}" />
+				</p:panelGrid>
+				<p:commandButton value="Voltar" action="#{jogoBN.voltarLogado}"
+					styleClass="ui-priority-primary" />
+				<p:commandButton value="Confirmar" action="#{jogoBN.inserir}"
+					update="formJogo" />
+				<h:messages globalOnly="true" />
+			</p:fieldset>
+		</h:form>
+	</div>
+
+	<!-- rodapé -->
+	<div class="rodape">LibJogos © 2018 - Todos os direitos
+		reservados</div>
+</body>
+</html>
